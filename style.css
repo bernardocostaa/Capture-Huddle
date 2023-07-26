@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --violet:#674baf;
+    --softMagenta:#e882e8;
+    --fontOpenSans:'Open Sans', sans-serif;
+    --fontPoppins:'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.bg-site{
+    background: url('/images/bg-desktop.svg') no-repeat;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+}
+
+body{
+    background: var(--violet);
+}
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.title{
+    font-family: var(--fontPoppins);
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.info-card{
+    color: white;
+}
+
+.info-text{
+    font-family: var(--fontOpenSans);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.btn{
+    color: var(--violet);
+    font-family: var(--fontOpenSans);
+    line-height: 1.5;
+    font-size: 1.125rem;
+    border: none;
+    background: white;
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 28px;
+    transition: .3s;
+}
+
+.btn:hover{
+    background: var(--softMagenta);
+    color: white;
+    box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.26);
+}
+
+.container{
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cont-card{
+    display: flex;
+    gap: 55px;
+    justify-content: space-between;
+    height: 493px;
+}
+.mb-24{
+    margin-bottom: 24px;
+}
+.logo-area{
+    padding:50px 0 ;
+}
+.info-card{
+    max-width: 520px;
+    padding-top: 35px;
+}
+
+.icones-social{
+    display: flex;
+    gap: 1rem;
+    padding-top: 30px;
+    justify-content: flex-end;
+}
+
+.icones-social a {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  .icones-social a:hover {
+    border-color: var(--softMagenta);
+    color: var(--softMagenta);
+  }
+  .logo{
+    max-width: 200px;
+}
+
+  @media(max-width:1023px){
+    .flex-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .cont-card{
+        height: inherit;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .logo-area{
+        padding: 20px 0;
+    }
+    .info-card{
+        text-align: center;
+    }
+    .icones-social{
+        justify-content: center;
+        padding: 60px 0 40px 0;
+    }
+    .logo{
+        max-width: 120px;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .info-text{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 0.875rem;
+        padding: 10px 60px;
+    }
+    .bg-site{
+        background: url('/images/bg-mobile.svg') no-repeat;
+        background-size: cover;
+    }
+  }
